@@ -1,31 +1,18 @@
-import { StyleSheet } from 'react-native';
+import { ScrollView, View } from "react-native";
 
-import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
+import DreamList from "@/components/DreamList";
+import { Text } from "@/components/ui/text";
 
 export default function TabTwoScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/two.tsx" />
-    </View>
+    <ScrollView className="bg-[#f5f5fa]">
+      <View className="flex-1">
+        <View className="px-6 pt-6 pb-2">
+          <Text className="text-2xl font-bold text-[#1a1a2e]">Mes rêves</Text>
+          <Text className="text-sm text-[#999] mt-1">Retrouvez tous vos rêves enregistrés</Text>
+        </View>
+        <DreamList />
+      </View>
+    </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});
