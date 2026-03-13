@@ -147,7 +147,7 @@ export default function DreamList() {
     const normalizedQuery = normalizeForSearch(searchQuery);
     if (!normalizedQuery) return dreams;
 
-    const tokens = normalizedQuery.split(/[\s,]+/g).filter(Boolean);
+    const tokens = normalizedQuery.split(/[\s,]+/g).filter(Boolean); // Divise la requête en tokens
     if (tokens.length === 0) return dreams;
 
     return dreams.filter((dream) => {
@@ -156,11 +156,12 @@ export default function DreamList() {
       const emotionLabel = emotionLabels[dream.emotionalState] ?? dream.emotionalState;
       const typeLabel = dreamTypeLabels[dream.dreamType] ?? dream.dreamType;
 
+      // Concatène tous les champs pertinents pour la recherche
       const haystack = normalizeForSearch(
         [dream.dreamText, keywordLabels, characterNames, dream.emotionalState, emotionLabel, dream.dreamType, typeLabel].filter(Boolean).join(" "),
       );
 
-      return tokens.every((t) => haystack.includes(t));
+      return tokens.every((t) => haystack.includes(t)); // Tous les tokens doivent être présents dans le haystack
     });
   }, [dreams, searchQuery]);
 
