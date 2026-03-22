@@ -96,20 +96,16 @@ npx expo start -c
   - pré-remplissage du formulaire
   - mise à jour par `id` en persistance
 
-## Captures d’écran (à compléter)
-
-Ajoutez vos captures dans un dossier (par ex. `docs/screenshots/`) puis remplacez les liens ci-dessous.
-
-> Liens factices : remplacez `URL_A_REMPLACER` par le chemin/URL réel de vos images.
+## Captures d’écran
 
 1. **Écran “Nouveau rêve” (formulaire)**
-   ![Nouveau rêve — formulaire](./example-pictures/image1.png)
+![Nouveau rêve — formulaire](./example-pictures/image1.png)
 
 2. **Écran “Mes rêves” (liste)**
-   ![Mes rêves — liste](./example-pictures/image2.png)
+![Mes rêves — liste](./example-pictures/image2.png)
 
 3. **Drawer “Détails du rêve”**
-   ![Détails — drawer](./example-pictures/image3.png)
+![Détails — drawer](./example-pictures/image3.png)
 
 4. **Modal “Modifier” (slide depuis la droite)**
-   ![Modifier — modal](./example-pictures/image4.png)
+![Modifier — modal](./example-pictures/image4.png)
